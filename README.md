@@ -7,7 +7,7 @@ In this exercise you will create a spacex launch table that has sorting, search 
 
 Designs can be found [here](https://zpl.io/DlRA7eW). You will receive login credentials separately in order to access the designs and associated assets.
 
-1. You can find the playground to see the schema and make queries [here]([https://api.spacex.land/graphql/](https://studio.apollographql.com/public/spacex-l4uc6p/explorer?variant=main)).
+1. You can find the playground to see the schema and make queries [here](https://studio.apollographql.com/public/spacex-l4uc6p/explorer?variant=main).
 2. For this challenge we will query the Entity called `launchesPast`.
 3. After you get all of the past launches, render them in a table with the columns as in Designs.
 4. Clicking a row of the table should take you to a detail screen of that launch.
