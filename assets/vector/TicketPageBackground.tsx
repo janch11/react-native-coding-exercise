@@ -6,7 +6,7 @@ export function TicketPageBackground({style}: {style?: StyleProp<ViewStyle>}) {
         <SvgXml
             style={style}
             xml={`
-                    <svg xmlns="http://www.w3.org/2000/svg" width="833" height="1366" viewBox="0 0 833 1366">
+                    <svg xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <clipPath id="b5pv6lusxa">
                                 <path data-name="Rectangle 120" transform="translate(0 -.123)" style="fill:#fff;stroke:#707070" d="M0 0h1366v833H0z"/>

@@ -1,86 +1,73 @@
 import {
-  GestureResponderEvent,
-  Pressable,
-  StyleProp,
-  StyleSheet,
   Text,
+  View,
+  StyleSheet,
+  TouchableOpacity,
   ViewStyle,
 } from "react-native";
-import { FC, PropsWithChildren } from "react";
-import { ButtonWrap } from "./ButtonWrap";
-import { Colors, Fonts } from "../../constants";
+import { colors } from "../../constants";
+import { SearchRocketIcon } from "../../assets/vector";
 
-type ButtonProps = {
-  onPress: (e: GestureResponderEvent) => void;
-  text?: string;
-  style?: StyleProp<ViewStyle>;
-  white?: boolean;
-  disabled?: boolean;
-} & PropsWithChildren;
+interface ButtonProps {
+  text: string;
+  type: "primary" | "secondary";
+  onPress: () => void;
+  style?: ViewStyle;
+}
 
-export const Button: FC<ButtonProps> = ({
-  style,
-  onPress,
-  text,
-  children,
-  white = false,
-  disabled = false,
-  ...props
-}) => {
+export const Button = (props: ButtonProps) => {
   return (
-    <ButtonWrap
-      style={[{ ...styles.contain, opacity: disabled ? 0.5 : 1 }, style]}
+    <TouchableOpacity
+      onPress={() => {
+        props.onPress();
+      }}
     >
-      <Pressable
-        disabled={disabled}
-        style={[styles.pressable]}
-        onPress={onPress}
-        {...props}
+      <View
+        style={[
+          styles.button,
+          (props.type === "primary" && styles.primaryButton) ||
+            (props.type === "secondary" && styles.secondaryButton),
+          props.style && { ...props.style },
+        ]}
       >
-        {children ? (
-          children
-        ) : (
-          <Text style={[styles.text]}>
-            {text?.toUpperCase()}
-          </Text>
-        )}
-      </Pressable>
-    </ButtonWrap>
+        <Text
+          style={[
+            styles.text,
+            props.type === "secondary" && styles.secondaryText,
+          ]}
+        >
+          {props.text}
+        </Text>
+      </View>
+    </TouchableOpacity>
   );
 };
 
+export default Button;
+
 const styles = StyleSheet.create({
-  contain: {
-    borderRadius: 4,
-    backgroundColor: "#fff",
+  button: {
+    height: 33,
+    alignSelf: "center",
     alignItems: "center",
-    justifyContent: "center",
-    width: "100%",
-    height: 60,
-  },
-  pressable: {
-    width: "100%",
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    textAlignVertical: "center",
     flexDirection: "row",
-    gap: 5,
+    paddingLeft: 25,
+    paddingRight: 25,
+    borderRadius: 50,
+    position: "relative",
+  },
+  primaryButton: {
+    backgroundColor: colors.darkBlue,
+  },
+  secondaryButton: {
+    backgroundColor: colors.orangeRed,
+    color: colors.white,
   },
   text: {
-    color: "#FFFFFF",
-    fontSize: 20,
-    lineHeight: 24,
+    color: colors.sandYellow,
+  },
+  secondaryText: {
+    color: colors.white,
     fontWeight: "bold",
-    fontFamily: Fonts.FiraSansBold,
-    letterSpacing: 1,
-  },
-  pressabeWhiteButton: {
-    borderWidth: 1,
-    borderColor: Colors.primaryPurple,
-    borderRadius: 6,
-  },
-  textWhiteButton: {
-    color: Colors.primaryPurple,
   },
 });

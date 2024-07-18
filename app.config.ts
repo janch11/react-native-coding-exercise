@@ -8,6 +8,12 @@ const BuildConfig = ({ config }: ConfigContext): ExpoConfig => {
     ...config,
     name: "React Native Exercise",
     slug: "react-native-exercise",
+    android: {
+      package: "com.hanekedesign.reactnativeexercise",
+    },
+    ios: {
+      bundleIdentifier: "com.hanekedesign.reactnativeexercise",
+    },
     version: "1.0.1",
     extra: {
       // add environment vars here

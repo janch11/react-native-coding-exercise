@@ -6,7 +6,7 @@ export function AppLogo({style}: {style?: StyleProp<ViewStyle>}) {
         <SvgXml
             style={style}
             xml={`
-                <svg xmlns="http://www.w3.org/2000/svg" width="181.179" height="94.09" viewBox="0 0 181.179 94.09">
+                <svg xmlns="http://www.w3.org/2000/svg">
                     <g data-name="Group 217">
                         <path data-name="Path 6345" d="M2235.536 1097.909v53.291h-8.936v-19.421l-8.931-17.031v36.452h-8.932v-53.286h8.932l8.931 17.032v-17.032z" transform="translate(-2164.435 -1097.168)" style="fill:#f4ddb5"/>
                         <path data-name="Path 6346" d="M2288.16 1151.2h-27.727v-53.287h27.727l-3.081 8.271h-15.715v13.623h8.931v8.256h-8.931v14.865h15.715z" transform="translate(-2179.245 -1097.17)" style="fill:#f4ddb5"/>

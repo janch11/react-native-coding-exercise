@@ -2,5 +2,10 @@ export * from "./RocketIcon";
 export * from "./PlanetIcon";
 export * from "./AppLogo";
 export * from "./Banner";
-
-
+export * from "./SearchRocketIcon";
+export * from "./FilterIcon";
+export * from "./SortIcon";
+export * from "./ChevronCircleRight";
+export * from "./TicketPageBackground";
+export * from "./TicketBackground";
+export * from "./BackButton";

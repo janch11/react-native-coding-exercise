@@ -6,7 +6,7 @@ export function RocketIcon({style}: {style?: StyleProp<ViewStyle>}) {
         <SvgXml
             style={style}
             xml={`
-                <svg xmlns="http://www.w3.org/2000/svg" width="65.791" height="151.464" viewBox="0 0 65.791 151.464">
+                <svg xmlns="http://www.w3.org/2000/svg">
                     <path data-name="Path 6316" d="M-1513.937 1246.807s1.035 28.956-2.926 44.367c-4.251 11.476 0 13.39 0 13.39l-7.785 7.714 26.25 1.25 1.3-13.958s-5.866-2.965-6.919-21.929-.6-31.619-.6-31.619z" transform="translate(1542.047 -1162.522)" style="fill:#f4ddb5"/>
                     <g data-name="Group 215">
                         <g data-name="Group 214">

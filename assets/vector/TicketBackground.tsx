@@ -5,7 +5,7 @@ export function TicketBackground({style}: {style?: StyleProp<ViewStyle>}) {
     return (
         <SvgXml
             style={style}
-            xml={`<svg data-name="Group 141" xmlns="http://www.w3.org/2000/svg" width="595.463" height="270.379" viewBox="0 0 595.463 270.379">
+            xml={`<svg data-name="Group 141" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <clipPath id="0oqtkw5q6a">
                                 <path data-name="Rectangle 110" d="M23 0h437.3v247.379a23 23 0 0 1-23 23H23a23 23 0 0 1-23-23V23A23 23 0 0 1 23 0z" style="fill:none"/>
