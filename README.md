@@ -54,6 +54,6 @@ I didn't use Redux since it is a small app and Redux could be antipattern with t
  3. I haven't tested this app on many devices, so I should test it and check if everything is working correctly with different types of mobile phones. 
  4. I would like to add printing functionality.
  
-**Waiting for your feedback ! **
+**Waiting for your feedback!**
 
 
