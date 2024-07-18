@@ -1,6 +1,6 @@
 import { View, Pressable, StyleSheet, Text } from "react-native";
-import { FilterIcon, SortIcon } from "../../assets/vector";
-import { colors } from "../../constants";
+import { FilterIcon, SortIcon } from "../../../assets/vector";
+import { colors } from "../../../constants";
 
 interface SortAndFilterProps {
   selectedColumn: string;

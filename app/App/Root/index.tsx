@@ -1,18 +1,14 @@
 import { StyleSheet, Text, View } from "react-native";
 import { colors } from "../../../constants";
 
-import {
-  TableHeader,
-  FilterMenu,
-  FilterByText,
-  SortAndFilter,
-  Pagination,
-  LaunchesList
-
-} from "../../../components";
+import { TableHeader, FilterByText } from "../../../components";
 import { useQuery } from "@apollo/client";
 import { GET_LAUNCHES_PAST } from "../../../api/queries";
 import { useState } from "react";
+import { LaunchesList } from "./LaunchesList";
+import { Pagination } from "./Pagination";
+import { FilterMenu } from "./FilterMenu";
+import { SortAndFilter } from "./SortAndFilter";
 
 export default function Root() {
   const limit = 5;
@@ -28,7 +24,7 @@ export default function Root() {
     limit,
     offset: currentOffset,
     order,
-    sort: "rocket",
+    sort: "launch_year",
   };
 
   const { loading, error, data, fetchMore, refetch } = useQuery(
@@ -57,6 +53,7 @@ export default function Root() {
         setLaunchFind={setLaunchFind}
         queryVariables={queryVariables}
         refetch={refetch}
+        placeholder="Search for flights"
       ></FilterByText>
       <SortAndFilter
         order={order}

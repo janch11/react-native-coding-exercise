@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
-import { Button } from "../Button";
-import { LaunchItem } from "../../types/LaunchItem";
-import { colors } from "../../constants";
+import { Button } from "../../../components/Button";
+import { LaunchItem } from "../../../types/LaunchItem";
+import { colors } from "../../../constants";
 
 export const Pagination = (props: {
   data: { launchesPast: LaunchItem[] };

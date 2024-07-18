@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: colors.sandYellow,
+    fontFamily: "Roboto-Bold",
   },
   secondaryText: {
     color: colors.white,

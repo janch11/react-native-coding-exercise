@@ -1,6 +1,6 @@
 import { View, ActivityIndicator, FlatList, StyleSheet } from "react-native";
-import { TableItem } from "../TableItem";
-import { LaunchItem } from "../../types/LaunchItem";
+import { LaunchItem } from "../../../types/LaunchItem";
+import { TableItem } from "../../../components";
 
 interface LaunchesListProps {
   loading: boolean;

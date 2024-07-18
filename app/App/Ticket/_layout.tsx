@@ -1,6 +1,6 @@
 import { Slot } from "expo-router";
 import { View, StyleSheet, ImageBackground } from "react-native";
-import { TicketBackground, TicketPageBackground } from "../../../assets/vector";
+import { TicketBackground } from "../../../assets/vector";
 
 const image = { uri: "https://legacy.reactjs.org/logo-og.png" };
 

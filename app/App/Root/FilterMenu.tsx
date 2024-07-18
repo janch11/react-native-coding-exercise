@@ -1,7 +1,7 @@
 import { StyleSheet, View } from "react-native";
 import OutsidePressHandler from "react-native-outside-press";
-import { FilterItem } from "../FilterItem";
-import { colors } from "../../constants";
+import { FilterItem } from "../../../components/FilterItem";
+import { colors } from "../../../constants";
 
 interface FilterMenuProps {
   setSelectedColumn: (arg0: string) => void;

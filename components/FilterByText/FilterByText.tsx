@@ -6,6 +6,7 @@ interface FilterByTextProps {
   setLaunchFind: (arg0: string) => void;
   refetch: (arg0: object) => void;
   queryVariables: object;
+  placeholder: string,
 }
 
 export const FilterByText = (props: FilterByTextProps) => {
@@ -16,7 +17,7 @@ export const FilterByText = (props: FilterByTextProps) => {
         onChange={(v: string) => {
           props.setLaunchFind(v);
         }}
-        placeholder="Search for flights"
+        placeholder={props.placeholder}
       />
       <Button
         onPress={() => {
