@@ -1,68 +1,59 @@
-# React Native Coding Exercise
+# Welcome to my implementation of the React Native Test Exercise
+Guys, 
+Here is a README for my repository. 
 
-## Overview
-This is a React app interview challenge. Please fork this repo, and push your code to a branch in your forked repo (following the instructions below).
+I added some notes about my decisions and problems during implementation. 
+Of course, with normal (business) project, the flow should be wholly different - if I encounter any difficulty with API or anything to discus if this solution is good or bad, I should pause and reach out to API dev or Lead and so on. 
 
-In this exercise you will create a spacex launch table that has sorting, search and pagination. Data will be available at the endpoint provided in the .env file.
+Since it is a test project, and I didn't have an opportunity to wait and discuss, I prepared small documentation what was wrong with the API and why I made some decisions. 
 
-Designs can be found [here](https://zpl.io/DlRA7eW). You will receive login credentials separately in order to access the designs and associated assets.
+I am totally open to your thoughts and feedback! It will be a pleasure!
 
-1. You can find the playground to see the schema and make queries [here](https://studio.apollographql.com/public/spacex-l4uc6p/explorer?variant=main).
-2. For this challenge we will query the Entity called `launchesPast`.
-3. After you get all of the past launches, render them in a table with the columns as in Designs.
-4. Clicking a row of the table should take you to a detail screen of that launch.
-5. All columns should be sortable in `asc/desc` order. Default order should be by Launch's `launch_year`. Make use of GraphQL queries.
-6. Search should only be implemented for Launch's `mission_name`. Make sure to use a GraphQL query.
+### Troubles with API
 
-# Notes
+During implementation, I had some problems with the API, so some features are not working:
 
-- Make sure to implement the UI/UX according to the Designs provided. We highly value attention to detail.
-- Please use Apollo client with hooks to query the data (packages should already be installed - check `package.json`).
+**1. Filtering**
 
-# Setup and Development
+ SpaceX API provided in the documentation is not working :)
+https://studio.apollographql.com/public/spacex-l4uc6p/variant/main/explorer 
+I am getting "Failed to fetch - Unable to reach server" 
+This repo provided in the docs looks like a copy of the orginal one which is deprecated:
+Link to the original one: https://github.com/SpaceXLand/api
+Link to the copy: https://github.com/apollographql/spacex
 
-1. Fork this repo `git@github.com:hanekedesign/react-native-coding-exercise.git`
-2. Make sure you are inside of the repo you just cloned, by running `cd react-native-coding-exercise`
-3. Run `yarn` to install all dependencies
-4. Run `expo start` to start the app
+So I had to use the copy of the copy :) 
+https://studio.apollographql.com/public/SpaceX-pxxbxen/variant/current/explorer
 
-## Technologies Used
-- Language: TypeScript
-- Development Platform: React Native (Expo Managed)
-- Package Manager: Yarn Preferred
-- Navigation: Expo Router
+But this API has some problems with the API filters:
+When I am using the query for past launches, only **limit** and **offset** work. 
+Other filters  **order**, **sort** and **find** always respond with the same data (no filtering). 
 
-## App Architecture
-App Structure: The app is structured with a focus on modular components and reusable utilities. Key areas include:
-- `app/`: Main application components and screens.
-- `components/`: Shared UI components like buttons, inputs, and headers.
-- `constants/`: Constants like colors and configurations.
-- `hooks/`: Custom React hooks for shared logic.
-- `store/`: State management using Redux.
-- `types/`: TypeScript type definitions for the app.
-- `utils/`: Utility functions and helpers.
-- Asset Management: Fonts and images are managed under the assets/ directory.
-- Styling: Consistent styling approach across components, leveraging React Native's styling capabilities.
+Please check it out, and circle back to me if you have any idea what is wrong, but I am pretty sure it is a difficulty with the API.
 
-### Dependencies
-Below are the key dependencies used in the app, along with links to their official documentation or relevant resources. This will help you understand each library's role in the project.
+Besides that, filtering is implemented by API is not returning correct responses, so I wasn't able to test. 
+
+**2. Total Count**
+
+This API does not return total number of records. It returns null if I try to get the total amount. 
+So looks like this is an additional concern with this copy of the copy of the API :). 
+I could use the length of all records and get them in additional request only for checking amount, but it would be horrible for performance and antipattern. 
+So I am only showing how many records are loaded.  
+
+### Some additional files in the repo
+
+I also removed all not required files from the repo. There were some types declarations, API Axios for logging, helpers and so on. So the repository contains only files/functions/variables in use.
+
+### Redux
+
+I didn't use Redux since it is a small app and Redux could be antipattern with this app. 
+
+### What could I do better? What could be improved? 
+ 1. Items from the able are opening by “long press”. I think it could be better for UX if I use some gestures handlers.
+ 2. Because of API problems, I wasn't able to test every functionality.
+ 3. I haven't tested this app on many devices, so I should test it and check if everything is working correctly with different types of mobile phones. 
+ 4. I would like to add printing functionality.
  
-1. **@react-navigation/native** - Navigation library for React Native apps, essential for screen transitions. [Read more](https://reactnavigation.org/docs/getting-started).
-    
-2. **@reduxjs/toolkit** - The official, opinionated, batteries-included toolset for efficient Redux development. [Read more](https://redux-toolkit.js.org/).
+**Waiting for your feedback ! **
 
-3. **expo** - An open-source platform for making universal native apps for Android, iOS, and the web with JavaScript and React. [Read more](https://docs.expo.dev/).
-    
-4. **expo-linking** - Provides a way to manage deep links in your Expo app. [Read more](https://docs.expo.dev/versions/latest/sdk/linking/).
-    
-5. **expo-router** - A routing library for Expo applications. [Read more](https://github.com/expo/router).
-
-6. **react-native-gesture-handler** - Provides native-driven gesture management APIs for building best-in-class gesture experiences in React Native. [Read more](https://docs.swmansion.com/react-native-gesture-handler/).
-    
-7. **react-redux** - Official React bindings for Redux. [Read more](https://react-redux.js.org/).
-
-## Getting Started
-- Clone the Repository: Clone the repo to your local machine.
-- Install Dependencies: Run yarn install to install all required dependencies.
-- Run the App: Use yarn start to start the app in development mode.
 
