@@ -31,12 +31,12 @@ Other filters  **order**, **sort** and **find** always respond with the same dat
 
 Please check it out, and circle back to me if you have any idea what is wrong, but I am pretty sure it is a difficulty with the API.
 
-Besides that, filtering is implemented by API is not returning correct responses, so I wasn't able to test. 
+Besides that, filtering is implemented from the UI side. But, since API is not returning correct responses I wasn't able to test. 
 
 **2. Total Count**
 
 This API does not return total number of records. It returns null if I try to get the total amount. 
-So looks like this is an additional concern with this copy of the copy of the API :). 
+So looks like this is an additional concern with this "copy of the copy" of the API :). 
 I could use the length of all records and get them in additional request only for checking amount, but it would be horrible for performance and antipattern. 
 So I am only showing how many records are loaded.  
 
