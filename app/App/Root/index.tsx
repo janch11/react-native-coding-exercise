@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { colors } from "../../../constants";
 
 import { TableHeader, FilterByText } from "../../../components";
@@ -35,7 +35,7 @@ export default function Root() {
   );
 
   if (error) {
-    <View>Error</View>;
+    return <View>Error</View>;
   }
 
   return (
@@ -46,7 +46,7 @@ export default function Root() {
           setIsFilterMenuOpen={setIsFilterMenuOpen}
           selectedColumn={selectedColumn}
           setSelectedColumn={setSelectedColumn}
-        ></FilterMenu>
+        />
       )}
       <TableHeader />
       <FilterByText
@@ -54,19 +54,19 @@ export default function Root() {
         queryVariables={queryVariables}
         refetch={refetch}
         placeholder="Search for flights"
-      ></FilterByText>
+      />
       <SortAndFilter
         order={order}
         setOrder={setOrder}
         setIsFilterMenuOpen={setIsFilterMenuOpen}
         selectedColumn={selectedColumn}
-      ></SortAndFilter>
+      />
       <LaunchesList
         loading={loading}
         data={data}
         selectedColumn={selectedColumn}
         setSelectedColumn={setSelectedColumn}
-      ></LaunchesList>
+      />
       <Pagination
         limit={limit}
         currentOffset={currentOffset}
@@ -74,7 +74,7 @@ export default function Root() {
         queryVariables={queryVariables}
         data={data}
         fetchMore={fetchMore}
-      ></Pagination>
+      />
     </View>
   );
 }

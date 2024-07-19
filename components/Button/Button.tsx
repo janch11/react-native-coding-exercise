@@ -6,7 +6,6 @@ import {
   ViewStyle,
 } from "react-native";
 import { colors } from "../../constants";
-import { SearchRocketIcon } from "../../assets/vector";
 
 interface ButtonProps {
   text: string;
@@ -65,7 +64,6 @@ const styles = StyleSheet.create({
   },
   text: {
     color: colors.sandYellow,
-    fontFamily: "Roboto-Bold",
   },
   secondaryText: {
     color: colors.white,

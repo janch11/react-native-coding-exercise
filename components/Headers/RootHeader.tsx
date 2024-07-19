@@ -9,7 +9,7 @@ export const RootHeader: FC = () => {
       <PlanetIcon style={styles.planet} />
       <AppLogo style={styles.appLogo} />
       <RocketIcon style={styles.rocket} />
-      <View style={styles.absoluteBackground}></View>
+      <View style={styles.absoluteBackground}/>
     </View>
   );
 };

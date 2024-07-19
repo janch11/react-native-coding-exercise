@@ -1,5 +1,4 @@
 import {
-  GestureResponderEvent,
   Pressable,
   StyleSheet,
   Text,

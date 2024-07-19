@@ -33,11 +33,11 @@ export const SortAndFilter = (props: SortAndFilterProps) => {
         <View style={styles.filterWrapper}>
           <Text style={styles.filtersText}> {renderFilterLabel()}</Text>
           <Pressable
-            onPress={() => {
+            onPress={() =>
               props.order === "asc"
                 ? props.setOrder("desc")
-                : props.setOrder("asc");
-            }}
+                : props.setOrder("asc")
+            }
           >
             <SortIcon
               style={[
@@ -48,7 +48,7 @@ export const SortAndFilter = (props: SortAndFilterProps) => {
           </Pressable>
         </View>
       </View>
-      <View style={styles.filtersLine}></View>
+      <View style={styles.filtersLine} />
     </View>
   );
 };

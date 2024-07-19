@@ -2,8 +2,6 @@ import { Slot } from "expo-router";
 import { View, StyleSheet, ImageBackground } from "react-native";
 import { TicketBackground } from "../../../assets/vector";
 
-const image = { uri: "https://legacy.reactjs.org/logo-og.png" };
-
 export default function TicketLayout() {
   return (
     <View style={styles.backgroundContainer}>
@@ -13,7 +11,7 @@ export default function TicketLayout() {
         source={require("../../../assets/png/background.png")}
       >
         <TicketBackground style={styles.ticketBackground} />
-         <Slot />
+        <Slot />
       </ImageBackground>
     </View>
   );

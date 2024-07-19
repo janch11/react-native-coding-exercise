@@ -21,7 +21,7 @@ export const TableItem = (props: TableItemProps) => {
       await AsyncStorage.setItem("selectedLaunch", JSON.stringify(props.item));
       router.push("App/Ticket");
     } catch (error) {
-      Alert.alert("Error", "Fetching error, try again");
+      Alert.alert("Error", "Fetching error, try again" + error);
     }
   };
   const handleOnPressOut = () => {

@@ -13,7 +13,7 @@ export const FilterByText = (props: FilterByTextProps) => {
   return (
     <View style={styles.filterByTextContainer}>
       <Input
-        withRocketIcon={true}
+        withRocketIcon
         onChange={(v: string) => {
           props.setLaunchFind(v);
         }}

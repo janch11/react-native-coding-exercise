@@ -16,7 +16,7 @@ export const Input = (props: ButtonProps) => {
         placeholder={props.placeholder}
         onChangeText={props.onChange}
         placeholderTextColor={colors.lightSandYellow}
-      ></TextInput>
+      />
       {props.withRocketIcon && <SearchRocketIcon style={styles.icon} />}
     </View>
   );
