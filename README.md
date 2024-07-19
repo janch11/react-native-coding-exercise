@@ -48,12 +48,18 @@ I also removed all not required files from the repo. There were some types decla
 
 I didn't use Redux since it is a small app and Redux could be antipattern with this app. 
 
+### Tested with
+
+1. Iphone 15
+2. Redmi Note 13 Pro
+3. XCode simulator
+
 ### What could I do better? What could be improved? 
  1. Items from the able are opening by “long press”. I think it could be better for UX if I use some gestures handlers.
  2. Because of API problems, I wasn't able to test every functionality.
  3. I haven't tested this app on many devices, so I should test it and check if everything is working correctly with different types of mobile phones. 
  4. I would like to add printing functionality.
  
-**Waiting for your feedback ! **
+**Waiting for your feedback!**
 
 
